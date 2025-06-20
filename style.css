@@ -86,3 +86,10 @@ html{
 #charList{
     font-size: 10px;
 }
+#output{
+    position: absolute;
+    top: 13em;
+    right: 1em;
+    font-size: 24px;
+    color: black;
+}
