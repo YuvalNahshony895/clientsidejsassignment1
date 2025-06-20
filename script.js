@@ -163,6 +163,8 @@ charBtn.addEventListener('click', function() {
     storyElement = charRows[locationOfRowChar].textContent;
     storyArray[0]= storyElement;
     console.log(storyArray);
+    let voice = new SpeechSynthesisUtterance(storyElement);
+    window.speechSynthesis.speak(voice);
     locationOfRowChar = (locationOfRowChar + 1) % charRows.length;
 });
 let locationOfRowAct = 0;
@@ -175,6 +177,8 @@ actBtn.addEventListener('click', function() {
     storyElement = actRows[locationOfRowAct].textContent;
     storyArray[1]= storyElement;
     console.log(storyArray);
+    let voice = new SpeechSynthesisUtterance(storyElement);
+    window.speechSynthesis.speak(voice);
     locationOfRowAct = (locationOfRowAct + 1) % actRows.length;
 });
 let locationOfRowAdj = 0;
@@ -187,6 +191,8 @@ adjBtn.addEventListener('click', function() {
     storyElement = AdjRows[locationOfRowAdj].textContent;
     storyArray[2]= storyElement;
     console.log(storyArray);
+    let voice = new SpeechSynthesisUtterance(storyElement);
+    window.speechSynthesis.speak(voice);
     locationOfRowAdj = (locationOfRowAdj + 1) % AdjRows.length;
 });
 let locationOfRowChar1 = 0;
@@ -199,6 +205,8 @@ charBtn1.addEventListener('click', function() {
     storyElement = char1Rows[locationOfRowChar1].textContent;
     storyArray[3]= storyElement;
     console.log(storyArray);
+    let voice = new SpeechSynthesisUtterance(storyElement);
+    window.speechSynthesis.speak(voice);
     locationOfRowChar1 = (locationOfRowChar1 + 1) % char1Rows.length;
 });
 let locationOfRowLoc = 0;
@@ -211,6 +219,8 @@ locBtn.addEventListener('click', function() {
     storyElement = locRows[locationOfRowLoc].textContent;
     storyArray[4]= storyElement;
     console.log(storyArray);
+    let voice = new SpeechSynthesisUtterance(storyElement);
+    window.speechSynthesis.speak(voice);
     locationOfRowLoc = (locationOfRowLoc + 1) % locRows.length;
 });
 
@@ -219,5 +229,19 @@ let output = document.getElementById("output");
 finalizeBtn.addEventListener('click', function() {
     let stringStory = storyArray.join(" ");
     output.textContent = stringStory;
+    let voice = new SpeechSynthesisUtterance(stringStory);
+    window.speechSynthesis.speak(voice);
     console.log(stringStory);
-})
+});
+
+randomBtn.addEventListener('click', function() {
+    let randChar = chars[Math.floor(Math.random() * chars.length)];
+    let randAct = acts[Math.floor(Math.random() * acts.length)];
+    let randAdj = adjs[Math.floor(Math.random() * adjs.length)];
+    let randChar1 = chars1[Math.floor(Math.random() * chars1.length)];
+    let randLoc = locs[Math.floor(Math.random() * locs.length)];
+    let randStory = `${randChar} ${randAct} ${randAdj} ${randChar1} ${randLoc}`;
+    let voice = new SpeechSynthesisUtterance(randStory);
+    window.speechSynthesis.speak(voice);
+    output.textContent = randStory;
+});
