@@ -1,0 +1,88 @@
+th, td {
+    border: 1px solid black;
+    padding: 1em; 
+}
+#title {
+    text-align: center;
+}
+html{
+    background-color: yellow;
+}
+#charbtn{
+    
+    margin-top: 5em;
+    padding: 1em;
+    background-color: purple;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+#actbtn{
+    margin-top: 5em;
+    padding: 1em;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+#adjbtn{
+    margin-top: 5em;
+    padding: 1em;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+#charbtn1{
+    margin-top: 5em;
+    padding: 1em;
+    background-color: orange;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+#locbtn{
+    margin-top: 5em;
+    padding: 1em;
+    background-color: pink;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+#btndiv{
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    
+}
+#randombtn{
+    margin-top: 10em;
+    padding: 1em;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    font-size: 30px;
+}
+#finalizebtn{
+    margin-top: 10em;
+    padding: 1em;
+    background-color: teal;
+    color: white;
+    cursor: pointer;
+    font-size: 30px;
+}
+#specialbtndiv{
+    position: absolute;
+    top: 20em;
+    right: 1em;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+#charList{
+    font-size: 10px;
+}
